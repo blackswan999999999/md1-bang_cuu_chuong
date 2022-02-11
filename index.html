@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BẢNG CỬU CHƯƠNG</title>
+    <link rel="stylesheet" href="markup.css">
+</head>
+<body>
+<p> BẢNG CỬU CHƯƠNG</p>
+<div id="s1"></div>
+</body>
+<script>
+    let tao_table = document.getElementById('s1');
+    let write_cuu_chuong = document.createElement('table')
+    tao_table.appendChild(write_cuu_chuong)
+    for (let i = 1; i < 11; i++) {
+        let row = document.createElement('tr');
+        //tạo dòng
+        write_cuu_chuong.appendChild(row);
+        //đưa từng hàng vào table
+        for (let j = 2; j < 10; j++) {
+            let col = document.createElement('td');
+            //tạo ô dữ liệu
+            row.appendChild(col);
+            //thêm ô dữ liệu vào trong từng dòng
+
+            col.innerHTML = '   ' + j + ' × ' + i + ' = ' + j * i;
+        //    lúc này trong td đang la dữ liệu trống ---> thay thế nội dung trong ô
+
+        }
+
+
+    }
+</script>
+</html>
